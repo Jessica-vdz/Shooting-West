@@ -397,7 +397,7 @@ MonoBehaviour:
   player1data: 
   player2data: 
   Port1: COM4
-  Port2: COM8
+  Port2: COM4
   sd2: 
 --- !u!4 &1132202820
 Transform:

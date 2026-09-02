@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class readDatafromEsp32 : MonoBehaviour
 {
-    string[] portNames = SerialPort.GetPortNames();
+    [SerializeField] string[] portNames = SerialPort.GetPortNames();
+
     int baudRate = 9600;
     SerialPort spPort1;
     SerialPort spPort2;
@@ -15,28 +16,31 @@ public class readDatafromEsp32 : MonoBehaviour
     private string port2id; // the id from port 2
     public string player1data; // the data reseaved from port 1
     public string player2data; // the data reseaved from port 2
-    public string Port1 = "COM2";
-
+    public string Port1 = "COM4";
+    public string Port2 = "COM6";
+    public string sd2;
     void Start()
     {
-        string porttest = portNames[0];
+        portNames = SerialPort.GetPortNames();
+      string Port1 = portNames[0];
+       string Port2 = portNames[1];
+
         Debug.Log($"{Port1}");
-        Debug.Log($"{porttest}");
-        // string Port2 = portNames[1];
+       
+
         spPort1 = new SerialPort(Port1, baudRate);
         spPort1.Open();
         spPort1.ReadTimeout = 500;
-        //spPort2 = new SerialPort(Port2, baudRate);
-        //spPort2.Open();
-        //spPort2.ReadTimeout = 500;
+        spPort2 = new SerialPort(Port2, baudRate);
+        spPort2.Open();
+        spPort2.ReadTimeout = 500;
     }
 
 
     void Update()
     {
-
-        readesp32data(spPort1, port1id);
-        
+       readesp32data(spPort1, port1id);
+       readesp32data(spPort2, port2id);
     }
 
     void OnApplicationQuit()
@@ -51,6 +55,8 @@ public class readDatafromEsp32 : MonoBehaviour
     }
     void readesp32data(SerialPort port, string portid)
     {
+
+
         try
         {
             for (int i = 0; i < 2; i++)
@@ -62,14 +68,14 @@ public class readDatafromEsp32 : MonoBehaviour
                     if (i == 0)
                     {
                         portid = dataport;
-                        Debug.Log($"port1id {portid}");
+                        //Debug.Log($"port1id {portid}");
                     }
                     if (i == 1)
                     {
                         if (portid == "test1")
                         {
                             player1data = dataport;
-                            Debug.Log($"data from port 1 player 1: {player1data}");
+                            //Debug.Log($"data from port 1 player 1: {player1data}");
                         }
                         else if (portid == "test2")
                         {
