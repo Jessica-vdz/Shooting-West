@@ -320,6 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _timerMinRange: 2
   _timerMaxRange: 3
+  _randomYSpread: 5
   _player1: {fileID: 1058799846}
   _player2: {fileID: 1356611563}
 --- !u!4 &825557837

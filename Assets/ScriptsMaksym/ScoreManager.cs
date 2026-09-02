@@ -13,4 +13,15 @@ public class ScoreManager : MonoBehaviour
         else
             Destroy(this);
     }
+    private void AddScore(int player)
+    {
+        if (player == 1)
+        {
+            Score1++;
+        }
+        else if (player == 2)
+        {
+            Score2++;
+        }
+    }
 }

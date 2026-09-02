@@ -44,7 +44,7 @@ public class PlayerController : Entity
         else
             Debug.DrawRay(_shootPoint.position, _gun.right * 50, Color.red, 1);
     }
-    public override void Death()
+    public override void OnTakeDamage()
     {
         GameManager.instance.RoundEnd(true);
     }
