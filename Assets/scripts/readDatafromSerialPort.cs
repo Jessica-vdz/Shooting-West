@@ -20,6 +20,8 @@ public class readDatafromSerialPort : MonoBehaviour
    
     public string player1data; // the data reseaved from port 1
     public string player2data; // the data reseaved from port 2
+    public static Action<string> Player1Pressed;
+    public static Action<string> Player2Pressed;
     string Port1;
     string Port2;
     bool checkport = true;
@@ -124,12 +126,13 @@ public class readDatafromSerialPort : MonoBehaviour
             if (portid == "test1")
             {
                 player1data = dataport2;
-
+                Player1Pressed?.Invoke(player1data);
                 //Debug.Log($"data from port 1 player 1: {player1data}");
             }
             else if (portid == "test2")
             {
                 player2data = dataport2;
+                Player2Pressed?.Invoke(player2data);
 
                 // Debug.Log($"data from port1 player 2:  {player2data}");
             }
@@ -143,7 +146,7 @@ public class readDatafromSerialPort : MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            Debug.Log($"error reading from serial port: {ex} ");
+            //Debug.Log($"error reading from serial port: {ex} ");
         }
         yield return 0;
     }

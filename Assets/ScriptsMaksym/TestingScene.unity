@@ -500,7 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b341aa2746b2b340949d515d3b82d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  MaxHealth: 20
   playerID: 0
   _gun: {fileID: 1596221570}
   _shootPoint: {fileID: 1338004942}
@@ -803,7 +802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1356611559
 SpriteRenderer:
   serializedVersion: 3
@@ -965,7 +964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b341aa2746b2b340949d515d3b82d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  MaxHealth: 20
   playerID: 0
   _gun: {fileID: 1283101104}
   _shootPoint: {fileID: 292464105}
