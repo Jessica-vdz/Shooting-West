@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : Entity
 {
+    public int playerID;
     [Header("Shooting")]
     [SerializeField] private Transform _gun;
     [SerializeField] private Transform _shootPoint;
@@ -46,6 +47,12 @@ public class PlayerController : Entity
     }
     public override void OnTakeDamage()
     {
-        GameManager.instance.RoundEnd(true);
+        if (IsDead() == false)
+            GameManager.instance.RestartRound();
+        else
+        {
+            int winnerID = playerID == 1 ? 2 : 1;
+            GameManager.instance.EndGame(winnerID);
+        }
     }
 }
