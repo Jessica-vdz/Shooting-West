@@ -1,10 +1,6 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.IO.Ports;
-using System.Web;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class readDatafromSerialPort : MonoBehaviour
@@ -15,9 +11,9 @@ public class readDatafromSerialPort : MonoBehaviour
     int baudRate = 9600;
     SerialPort sp1;
     SerialPort sp2;
-    string port1id; 
+    string port1id;
     string port2id;
-   
+
     public string player1data; // the data reseaved from port 1
     public string player2data; // the data reseaved from port 2
     public static Action<string> Player1Pressed;
@@ -49,9 +45,9 @@ public class readDatafromSerialPort : MonoBehaviour
 
     void Update()
     {
-        if(portNames.Length < 2)
+        if (portNames.Length < 2)
         {
-         StartCoroutine(getPorts());
+            StartCoroutine(getPorts());
 
         }
 
@@ -60,7 +56,7 @@ public class readDatafromSerialPort : MonoBehaviour
         if (portNames.Length > 1 && checkport)
         {
             string Port1 = "COM7";
-             Port2 = portNames[1];
+            Port2 = portNames[1];
 
             Debug.Log($"{Port1}");
             Debug.Log($"{Port2}");
@@ -79,8 +75,8 @@ public class readDatafromSerialPort : MonoBehaviour
         }
         else if (checkport == false)
         {
-            StartCoroutine(ReadSerialportData(sp1,port1id));
-            StartCoroutine(ReadSerialportData(sp2,port2id));
+            StartCoroutine(ReadSerialportData(sp1, port1id));
+            StartCoroutine(ReadSerialportData(sp2, port2id));
 
         }
     }
@@ -99,19 +95,19 @@ public class readDatafromSerialPort : MonoBehaviour
             sp2.Close();
         Debug.Log("close port");
     }
-    IEnumerator ReadSerialportData(SerialPort port, string portid )
+    IEnumerator ReadSerialportData(SerialPort port, string portid)
     {
         try
         {
-            
+
             if (port.BytesToRead > 0)
             {
 
                 dataport = port.ReadLine();
                 portid = dataport;
-               // Debug.Log($"dataport read 1: {dataport}");
+                // Debug.Log($"dataport read 1: {dataport}");
             }
-            
+
 
 
             if (dataport.Contains("|"))
@@ -121,7 +117,7 @@ public class readDatafromSerialPort : MonoBehaviour
                 dataport2 = portsplit[1];
             }
 
- 
+
 
             if (portid == "test1")
             {
