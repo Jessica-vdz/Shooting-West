@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MainMenu : MonoBehaviour
         if(Input.GetKey(KeyCode.Space))
         {
             start = true;
+            SceneManager.LoadScene("Shootout", LoadSceneMode.Single);
         }
     }
 }
