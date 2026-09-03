@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.IO.Ports;
@@ -6,13 +6,15 @@ using System.Web;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using Microsoft.Win32;
 
 public class readDatafromSerialPort : MonoBehaviour
 {
 
-    [SerializeField] string[] portNames = SerialPort.GetPortNames();
+    [SerializeField] string[] portNames;
 
     int baudRate = 9600;
+    SerialPort sp;
     SerialPort sp1;
     SerialPort sp2;
     string port1id; 
@@ -26,30 +28,37 @@ public class readDatafromSerialPort : MonoBehaviour
     public float portcheckTime = 0.5f;
     string dataport;
     string dataport2;
+    int i = 0;
 
 
-    //private void Start()
-    //{
+    private void Start()
+    {
+        string[] ports = SerialPort.GetPortNames();
 
-    //portNames = SerialPort.GetPortNames();
-    //string Port1 = portNames[0];
-    // Port2 = portNames[1];
+        foreach (string port in ports)
+        {
+            sp = new SerialPort(port, baudRate);
+            sp.Open();
+            sp.ReadTimeout = 500;
+            sp.WriteTimeout = 500;
+            sp.WriteLine("hello");
+            string s = sp.ReadLine();
+            if (s == "hello")
+            {
 
-    // Debug.Log($"{Port1}");
-    // Debug.Log($"{Port2}");
+                portNames[i] = s;
+                i++;
+            }
+        }
+        // GetArduinoPort(portNames);
 
-
-
-    //sp1 = new SerialPort(Port1, baudRate);
-    //sp1.Open();
-    //sp1.ReadTimeout = 500;
-    //}
+    }
 
     void Update()
     {
         if(portNames.Length < 2)
         {
-         StartCoroutine(getPorts());
+          StartCoroutine(getPorts());
 
         }
 
@@ -147,5 +156,52 @@ public class readDatafromSerialPort : MonoBehaviour
         }
         yield return 0;
     }
+    public void GetArduinoPort(string[] portNames)
+    {
+        // Veelvoorkomende chipsets en namen van Arduino's
+        string[] targetKeywords = { "Arduino", "CH340", "CP210", "FTDI", "USB Serial" };
+        int i = 0;
+        // Pad in het Windows-register waar USB/Seriële apparaten worden gekoppeld
+        string registryPath = @"SYSTEM\CurrentControlSet\Control\COM Name Arbiter\Devices";
 
+        try
+        {
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(registryPath))
+            {
+                if (key != null)
+                {
+                    foreach (string valueName in key.GetValueNames())
+                    {
+                        // valueName bevat vaak de hardware-omschrijving of ID
+                        foreach (string keyword in targetKeywords)
+                        {
+                            if (valueName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                            {
+                                
+                                
+
+                                 portNames[i] =   key.GetValue(valueName).ToString();
+                                i++;
+                                // Geeft de COM-poort terug (bijv. "COM3")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Fout bij lezen register: {e.Message}");
+        }
+
+        // Alternatieve fallback: als het register niets vindt, pak de eerste beschikbare poort
+        string[] ports = SerialPort.GetPortNames();
+        if (ports.Length > 0)
+        {
+            Debug.LogWarning($"Keywords niet gevonden. Fallback naar eerste poort: {ports[0]}");
+           
+        }
+
+        
+    }
 }
