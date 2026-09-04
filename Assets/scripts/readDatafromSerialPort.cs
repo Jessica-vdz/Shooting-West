@@ -9,7 +9,7 @@ public class readDatafromSerialPort : MonoBehaviour
 
 
     [SerializeField] string[] ports = SerialPort.GetPortNames();
-    int baudRate = 9600; // do not change
+    int baudRate = 115200; // do not change
     SerialPort sp;
     SerialPort sp1 = null;
     SerialPort sp2 = null;
@@ -193,8 +193,8 @@ public class readDatafromSerialPort : MonoBehaviour
         {
             using (sp = new SerialPort(port, baudRate))
             {
-                sp.ReadTimeout = 200;
-                sp.WriteTimeout = 200;
+                sp.ReadTimeout = 2000;
+                sp.WriteTimeout = 2000;
                 sp.NewLine = "\n";
 
                 sp.Open();
