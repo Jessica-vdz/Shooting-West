@@ -3,7 +3,11 @@
 --- !u!159 &1
 EditorSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 16
+=======
+  serializedVersion: 15
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_SerializationMode: 2
   m_LineEndingsForNewScripts: 0
   m_DefaultBehaviorMode: 1
@@ -23,16 +27,26 @@ EditorSettings:
   m_EnableTextureStreamingInPlayMode: 1
   m_EnableEditorAsyncCPUTextureLoading: 0
   m_AsyncShaderCompilation: 1
+<<<<<<< HEAD
   m_BlockShaders: 0
   m_UnlockBlockShaders: 0
   m_PrefabModeAllowAutoSave: 1
   m_EnterPlayModeOptionsEnabled: 1
   m_EnterPlayModeOptions: 1
+=======
+  m_PrefabModeAllowAutoSave: 1
+  m_EnterPlayModeOptionsEnabled: 1
+  m_EnterPlayModeOptions: 0
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_GameObjectNamingDigits: 1
   m_GameObjectNamingScheme: 0
   m_AssetNamingUsesSpace: 1
   m_InspectorUseIMGUIDefaultInspector: 0
   m_UseLegacyProbeSampleCount: 0
+<<<<<<< HEAD
+=======
+  m_SerializeInlineMappingsOnOneLine: 1
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_DisableCookiesInLightmapper: 1
   m_ShadowmaskStitching: 0
   m_AssetPipelineMode: 1
@@ -42,12 +56,20 @@ EditorSettings:
   m_CacheServerNamespacePrefix: default
   m_CacheServerEnableDownload: 1
   m_CacheServerEnableUpload: 1
+<<<<<<< HEAD
   m_CacheServerEnableTls: 0
   m_CacheServerImportResultCachingEnabled: 0
+=======
+  m_CacheServerEnableAuth: 0
+  m_CacheServerEnableTls: 0
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_CacheServerValidationMode: 2
   m_CacheServerDownloadBatchSize: 128
   m_EnableEnlightenBakedGI: 0
   m_ReferencedClipsExactNaming: 1
   m_ForceAssetUnloadAndGCOnSceneLoad: 1
+<<<<<<< HEAD
   m_HideBuildProfileClassicPlatforms: 1
   m_UseLegacyHierarchy: 0
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5

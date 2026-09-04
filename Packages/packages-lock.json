@@ -121,12 +121,15 @@
         "com.unity.test-framework.performance": "3.2.0"
       }
     },
+<<<<<<< HEAD
     "com.unity.editorcoroutines": {
       "version": "6.6.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
     "com.unity.ext.nunit": {
       "version": "2.1.0",
       "depth": 1,
@@ -140,7 +143,11 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
       "version": "3.0.38",
+=======
+      "version": "3.0.39",
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -166,6 +173,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.learn.iet-framework": {
       "version": "6.0.7",
       "depth": 0,
@@ -176,12 +184,25 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
     "com.unity.mathematics": {
       "version": "1.4.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
+<<<<<<< HEAD
+=======
+    "com.unity.multiplayer.center": {
+      "version": "2.0.1",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      }
+    },
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
       "depth": 2,
@@ -232,6 +253,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.settings-manager": {
       "version": "2.1.1",
       "depth": 1,
@@ -239,6 +261,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
     "com.unity.shadergraph": {
       "version": "17.6.0",
       "depth": 1,

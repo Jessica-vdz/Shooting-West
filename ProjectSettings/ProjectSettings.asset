@@ -3,8 +3,13 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 30
   productGUID: 6611b8fab38db274cb6f87d628e0cca9
+=======
+  serializedVersion: 28
+  productGUID: ee8211d9a24dbf4499da8fbcf7c04a0d
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +18,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: wild_west_game
+=======
+  productName: Gamejamthing
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -41,6 +50,10 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
+<<<<<<< HEAD
+=======
+  m_HolographicTrackingLossScreen: {fileID: 0}
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
   defaultScreenWidthWeb: 960
@@ -54,7 +67,11 @@ PlayerSettings:
   mipStripping: 0
   numberOfMipsStripped: 0
   numberOfMipsStrippedPerMipmapLimitGroup: {}
+<<<<<<< HEAD
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000i
+=======
+  m_StackTraceTypes: 010000000100000001000000010000000100000001000000
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
@@ -65,15 +82,21 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   preserveFramebufferAlpha: 0
+<<<<<<< HEAD
   adjustIOSFPSUsingThermalState: 1
   thermalStateSeriousIOSFPS: 30
   thermalStateCriticalIOSFPS: 15
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 1
+<<<<<<< HEAD
   androidRequestedVisibleInsets: 0
   androidSystemBarsBehavior: 2
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   androidDisplayOptions: 1
   androidBlitType: 0
   androidResizeableActivity: 1
@@ -88,7 +111,10 @@ PlayerSettings:
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0
+<<<<<<< HEAD
   callOnDisableOnAssetBundleUnload: 1
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
@@ -119,7 +145,10 @@ PlayerSettings:
   xboxEnableGuest: 0
   xboxEnablePIXSampling: 0
   metalFramebufferOnly: 0
+<<<<<<< HEAD
   metalUseMetalDisplayLink: 0
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   xboxOneResolution: 0
   xboxOneSResolution: 0
   xboxOneXResolution: 3
@@ -153,16 +182,28 @@ PlayerSettings:
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
+<<<<<<< HEAD
+=======
+  m_HolographicPauseOnTrackingLoss: 1
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   xboxOneDisableKinectGpuReservation: 1
   xboxOneEnable7thCore: 1
   vrSettings:
     enable360StereoCapture: 0
+<<<<<<< HEAD
+=======
+  isWsaHolographicRemotingEnabled: 0
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   enableFrameTimingStats: 0
   enableOpenGLProfilerGPURecorders: 1
   allowHDRDisplaySupport: 0
   useHDRDisplay: 0
   hdrBitDepth: 0
+<<<<<<< HEAD
   m_ColorGamuts: 00000000i
+=======
+  m_ColorGamuts: 00000000
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   targetPixelDensity: 30
   resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
@@ -178,7 +219,11 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
+<<<<<<< HEAD
   AndroidMinSdkVersion: 26
+=======
+  AndroidMinSdkVersion: 25
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   AndroidPreferredDataLocation: 1
@@ -203,7 +248,10 @@ PlayerSettings:
   tvOSTargetOSVersionString: 15.0
   VisionOSSdkVersion: 0
   VisionOSTargetOSVersionString: 1.0
+<<<<<<< HEAD
   xcodeProjectType: 0
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -260,7 +308,11 @@ PlayerSettings:
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
   clonedFromGUID: c19f32bac17ee4170b3bf8a6a0333fb9
+<<<<<<< HEAD
   templatePackageId: com.unity.template.universal-2d@7.0.0
+=======
+  templatePackageId: com.unity.template.universal-2d@6.1.2
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -271,6 +323,10 @@ PlayerSettings:
   useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 2
+<<<<<<< HEAD
+=======
+  AndroidAllowedArchitectures: -13
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
@@ -305,6 +361,10 @@ PlayerSettings:
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs: []
+<<<<<<< HEAD
+=======
+  m_BuildTargetVRSettings: []
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
@@ -478,8 +538,11 @@ PlayerSettings:
   switchMicroSleepForYieldTime: 25
   switchRamDiskSpaceSize: 12
   switchUpgradedPlayerSettingsToNMETA: 0
+<<<<<<< HEAD
   switchCaStoreSource: 0
   switchCaStoreFilePath: 
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
@@ -588,7 +651,10 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
+<<<<<<< HEAD
   webProgressiveAssetLoading: 0
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -596,7 +662,10 @@ PlayerSettings:
     Android: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
+<<<<<<< HEAD
   il2cppLTOMode: {}
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   il2cppStacktraceInformation: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -607,19 +676,31 @@ PlayerSettings:
   scriptingRuntimeVersion: 1
   gcIncremental: 1
   gcWBarrierValidation: 0
+<<<<<<< HEAD
   managedCodeVariant: {}
   apiCompatibilityLevelPerPlatform: {}
   editorAssembliesCompatibilityLevel: 2
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: wild_west_game
+=======
+  apiCompatibilityLevelPerPlatform: {}
+  editorAssembliesCompatibilityLevel: 1
+  m_RenderingPath: 1
+  m_MobileRenderingPath: 1
+  metroPackageName: Gamejamthing
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: wild_west_game
+=======
+  metroApplicationDescription: Gamejamthing
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -667,6 +748,10 @@ PlayerSettings:
   XboxOneXTitleMemory: 8
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
+<<<<<<< HEAD
+=======
+  vrEditorSettings: {}
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   cloudServicesEnabled: {}
   luminIcon:
     m_Name: 
@@ -685,6 +770,7 @@ PlayerSettings:
   hmiCpuConfiguration: 
   hmiLogStartupTiming: 0
   qnxGraphicConfPath: 
+<<<<<<< HEAD
   apiCompatibilityLevel: 3
   captureStartupLogs: {}
   activeInputHandler: 2
@@ -695,6 +781,17 @@ PlayerSettings:
   qualitySettingsNames: []
   projectName: wild_west_game
   organizationId: nemeless22
+=======
+  apiCompatibilityLevel: 6
+  captureStartupLogs: {}
+  activeInputHandler: 1
+  windowsGamepadBackendHint: 0
+  cloudProjectId: 
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: 
+  organizationId: 
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
@@ -705,5 +802,8 @@ PlayerSettings:
   androidVulkanAllowFilterList: []
   androidVulkanDeviceFilterListAsset: {fileID: 0}
   d3d12DeviceFilterListAsset: {fileID: 0}
+<<<<<<< HEAD
   webGPUDeviceFilterListAsset: {fileID: 0}
+=======
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   allowedHttpConnections: 3

@@ -38,7 +38,13 @@ MonoBehaviour:
     m_Modified: 0
     m_ErrorMessage: 
     m_UserModificationsEntityId:
+<<<<<<< HEAD
       m_rawData: 1099511629230
     m_OriginalEntityId:
       m_rawData: 1099511629231
+=======
+      m_rawData: 1099511629184
+    m_OriginalEntityId:
+      m_rawData: 1099511629185
+>>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
   m_LoadAssets: 0
