@@ -35,8 +35,8 @@ public class readDatafromSerialPort : MonoBehaviour
     {
        //sp1 = openport( "COM4");
        StartCoroutine(getPorts());
-        
 
+       // Player1Pressed.Invoke("39.0");
     }
 
     void Update()
@@ -102,6 +102,10 @@ public class readDatafromSerialPort : MonoBehaviour
                                 sp2 = openport(Port2);
                                 port2connected = true;
                             }
+                        }
+                        else
+                        {
+                            Debug.Log($"could not read port {port}");
                         }
 
 
@@ -198,6 +202,7 @@ public class readDatafromSerialPort : MonoBehaviour
                 sp.WriteLine("hello");
 
                 string s = sp.ReadLine().Trim();
+                Debug.Log($"{s}");
                 sp.Close();
                 // sp.Dispose();
 
@@ -214,6 +219,7 @@ public class readDatafromSerialPort : MonoBehaviour
         }
         catch (TimeoutException)
         {
+            Debug.Log("timeout");
             return false;
             // This port didn't respond.
         }

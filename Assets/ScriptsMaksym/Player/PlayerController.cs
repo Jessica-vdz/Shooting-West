@@ -14,15 +14,17 @@ public class PlayerController : MonoBehaviour
     private string lastAngle;
     private void Awake()
     {
+        readDatafromSerialPort.Player1Pressed += Shoot;
         readDatafromSerialPort.Player2Pressed += Shoot;
     }
     public void Shoot(string currentAngle)
     {
+        Debug.Log(currentAngle);
         if (currentAngle == lastAngle) return;
         lastAngle = currentAngle;
         float.TryParse(currentAngle, out float r);
         Debug.Log("TRYING TO SHOOT");
-        if (CheckPointer(r, 0, 5f))
+        if (CheckPointer(r, 5, 12f))
         {
             Debug.Log("HIT");
         }
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("MISS");
         }
+
     }
     public static bool CheckPointer(float current, float needed, float allowed)
     {
