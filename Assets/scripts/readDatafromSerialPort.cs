@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -22,6 +22,8 @@ public class readDatafromSerialPort : MonoBehaviour
     [SerializeField] string Port2;
     public bool port1connected = false;
     public bool port2connected = false;
+    public static Action<string> Player1Pressed;
+    public static Action<string> Player2Pressed;
 
     public float portcheckTime = 0.5f;
 
@@ -152,12 +154,13 @@ public class readDatafromSerialPort : MonoBehaviour
             if (portid == "test1")
             {
                 player1data = dataport2;
-
+                Player1Pressed?.Invoke(player1data);
                 //Debug.Log($"data from port 1 player 1: {player1data}");
             }
             else if (portid == "test2")
             {
                 player2data = dataport2;
+                Player2Pressed?.Invoke(player2data);
 
                 // Debug.Log($"data from port1 player 2:  {player2data}");
             }
