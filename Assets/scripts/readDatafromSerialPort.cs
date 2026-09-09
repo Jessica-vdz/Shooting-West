@@ -22,8 +22,8 @@ public class readDatafromSerialPort : MonoBehaviour
     [SerializeField] string Port2;
     public bool port1connected = false;
     public bool port2connected = false;
-    public static Action<string> Player1Pressed;
-    public static Action<string> Player2Pressed;
+    public static Action<string, string> Player1Pressed;
+    public static Action<string, string> Player2Pressed;
 
     public float portcheckTime = 0.5f;
 
@@ -33,16 +33,16 @@ public class readDatafromSerialPort : MonoBehaviour
 
     private void Start()
     {
-       //sp1 = openport( "COM4");
-       StartCoroutine(getPorts());
+        //sp1 = openport( "COM4");
+        StartCoroutine(getPorts());
 
-       // Player1Pressed.Invoke("39.0");
+        // Player1Pressed.Invoke("39.0");
     }
 
     void Update()
     {
 
-       
+
 
 
 
@@ -105,7 +105,10 @@ public class readDatafromSerialPort : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log($"could not read port {port}");
+                            Debug.Log($"{port} is not a controller");
+
+
+
                         }
 
 
@@ -158,13 +161,13 @@ public class readDatafromSerialPort : MonoBehaviour
             if (portid == "test1")
             {
                 player1data = dataport2;
-                Player1Pressed?.Invoke(player1data);
+                Player1Pressed?.Invoke(player1data, "Player2");
                 //Debug.Log($"data from port 1 player 1: {player1data}");
             }
             else if (portid == "test2")
             {
                 player2data = dataport2;
-                Player2Pressed?.Invoke(player2data);
+                Player2Pressed?.Invoke(player2data, "Player2");
 
                 // Debug.Log($"data from port1 player 2:  {player2data}");
             }
@@ -193,16 +196,24 @@ public class readDatafromSerialPort : MonoBehaviour
         {
             using (sp = new SerialPort(port, baudRate))
             {
-                sp.ReadTimeout = 2000;
-                sp.WriteTimeout = 2000;
+                sp.Open();
+                //sp.DtrEnable = true; 
+                //sp.RtsEnable = true;
+                sp.ReadTimeout = 1000;
+                sp.WriteTimeout = 1000;
                 sp.NewLine = "\n";
 
-                sp.Open();
-
+                // System.Threading.Thread.Sleep(1500);
                 sp.WriteLine("hello");
 
-                string s = sp.ReadLine().Trim();
-                Debug.Log($"{s}");
+                string s = "";
+                if (sp.BytesToRead > 0)
+                {
+                    s = sp.ReadLine().Trim();
+                    Debug.Log($"{s}");
+
+                }
+
                 sp.Close();
                 // sp.Dispose();
 
@@ -217,9 +228,9 @@ public class readDatafromSerialPort : MonoBehaviour
                 }
             }
         }
-        catch (TimeoutException)
+        catch (TimeoutException ex)
         {
-            Debug.Log("timeout");
+            Debug.Log($"timeout {ex}");
             return false;
             // This port didn't respond.
         }
@@ -240,7 +251,7 @@ public class readDatafromSerialPort : MonoBehaviour
             SerialPort port = new SerialPort(portname, baudRate);
             port.Open();
             port.ReadTimeout = 200;
-           
+
             return port;
         }
         catch (TimeoutException)
