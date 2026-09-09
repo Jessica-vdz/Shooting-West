@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    // most of all the code here is made by Maksym
     [Header("Health")]
     public float MaxHealth;
     private float _curHealth;

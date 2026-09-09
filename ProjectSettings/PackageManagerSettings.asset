@@ -18,7 +18,7 @@ MonoBehaviour:
   m_SeeAllPackageVersions: 0
   m_DismissPreviewPackagesInUse: 0
   oneTimeWarningShown: 0
-  oneTimePackageErrorsPopUpShown: 0
+  oneTimePackageErrorsPopUpShown: 1
   m_MainRegistry:
     m_Id: main
     m_Name: 
@@ -39,6 +39,7 @@ MonoBehaviour:
     m_ErrorMessage: 
     m_UserModificationsEntityId:
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_rawData: 1099511629230
     m_OriginalEntityId:
       m_rawData: 1099511629231
@@ -47,4 +48,9 @@ MonoBehaviour:
     m_OriginalEntityId:
       m_rawData: 1099511629185
 >>>>>>> 81ccf78bb8c8844151fde9f89e22bb132b7a0df5
+=======
+      m_rawData: 1099511629269
+    m_OriginalEntityId:
+      m_rawData: 1099511629270
+>>>>>>> 1b70b3ac8c25966921ec60f6769154b7cbadeb44
   m_LoadAssets: 0
