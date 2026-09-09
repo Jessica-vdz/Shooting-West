@@ -1,3 +1,7 @@
 # Shooting-West
 
-# ![](image/1.gif)
+# port connection
+![](image/1.gif)
+
+# menu plus game with out controller
+![](image/2.gif)
